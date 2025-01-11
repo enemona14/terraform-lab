@@ -17,7 +17,7 @@ resource "google_compute_instance" "test-vm" {
   }
 }
 
-resource "google_compute_instanceurope-west1e" "test-vm2" {
+resource "google_compute_instance" "test-vm2" {
   name         = "my-vm-europe"
   machine_type = "e2-micro"          
   zone         = "europe-west1"

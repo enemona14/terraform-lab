@@ -19,7 +19,7 @@ resource "google_compute_subnetwork" "subnet_2" {
 
 resource "google_compute_subnetwork" "subnet_3" {
   name          = "my-subnet-3"
-  ip_cidr_range = "10.1.0.0/24"
+  ip_cidr_range = "10.2.0.0/24"
   region        = "asia-southeast1"
   network       = google_compute_network.vpc-network.id
 }
