@@ -6,26 +6,15 @@ resource "google_storage_bucket" "gcp-bucket" {
 }
 
 resource "google_storage_bucket" "gcp-bucket-europe" {
-  name     = "nexedge-bucket-mona123456-europe"
-  location = "EUROPE"
+  name     = "nexedge-bucket-mona122222"
+  location = "EUROPE-WEST1"
   storage_class = "STANDARD"
   uniform_bucket_level_access = true
 }
 
 resource "google_storage_bucket" "gcp-bucket-asia" {
-  name     = "nexedge-bucket-mona123456-asia"
+  name     = "nexedge-bucket-mona133333"
   location = "ASIA"
   storage_class = "STANDARD"
   uniform_bucket_level_access = true
-}
-
-resource "google_sql_database_instance" "instance_asia" {
-  name              = "postgres-db"
-  region            = "asia-southeast1"
-  database_version = "POSTGRES_15" 
-  settings {
-    tier = "db-f1-micro"
-  }
-
-  deletion_protection = "false"
 }

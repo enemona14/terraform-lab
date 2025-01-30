@@ -1,5 +1,5 @@
 resource "google_compute_instance" "test-vm" {
-  name         = "my-vm"
+  name         = "my-vm-us"
   machine_type = "e2-micro"          
   zone         = "us-central1-a"
 
@@ -18,9 +18,9 @@ resource "google_compute_instance" "test-vm" {
 }
 
 resource "google_compute_instance" "test-vm2" {
-  name         = "my-vm-europe"
+  name         = "my-vm-eu"
   machine_type = "e2-micro"          
-  zone         = "europe-west1"
+  zone         = "europe-west1-b"
 
   boot_disk {
     initialize_params {
@@ -39,7 +39,7 @@ resource "google_compute_instance" "test-vm2" {
 resource "google_compute_instance" "test-vm3" {
   name         = "my-vm-asia"
   machine_type = "e2-micro"          
-  zone         = "asia-southeast1"
+  zone         = "asia-southeast1-b"
 
   boot_disk {
     initialize_params {
